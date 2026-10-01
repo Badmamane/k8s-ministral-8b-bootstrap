@@ -1,0 +1,5 @@
+terraform 1.16.2
+tflint 0.59.1
+pipx:checkov 3.3.17
+pipx:pre-commit 4.6.2
+pipx 1.17.2

@@ -1,0 +1,15 @@
+# ------ CKV_TF_1 wants git sources pinned by commit hash; every module here is
+# ------ a versioned terraform-aws-modules registry source, tracked by Renovate.
+# ------ CKV_AWS_252 / CKV2_AWS_10: the lab trail delivers to S3 with log file
+# ------ validation; SNS and CloudWatch Logs delivery are not worth their cost here.
+# ------ CKV2_AWS_57: the Secrets Manager entries are hand-filled placeholders
+# ------ (deploy key, Grafana password, API keys); nothing can rotate them.
+# ------ CKV_AWS_109 / CKV_AWS_356: iam:List* and iam:CreateServiceLinkedRole only
+# ------ accept "*" as resource; the statement holds reads and that one action.
+skip-check:
+  - CKV_TF_1
+  - CKV_AWS_252
+  - CKV2_AWS_10
+  - CKV2_AWS_57
+  - CKV_AWS_109
+  - CKV_AWS_356
